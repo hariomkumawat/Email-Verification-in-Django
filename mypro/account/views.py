@@ -91,7 +91,7 @@ def token_send(request):
 
 def Logout(request):
     logout(request)
-    return redirect ('/login')
+    return HttpResponseRedirect('/login/')
 
 
 def ForgetPassword(request):
