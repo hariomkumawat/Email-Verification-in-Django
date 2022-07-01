@@ -8,7 +8,7 @@ from django.contrib import messages
 import uuid
 from django.conf import Settings,settings
 from django.core.mail import send_mail
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -90,6 +90,7 @@ def token_send(request):
     return render (request,('token_send.html'))
 
 def Logout(request):
+    logout(request)
     return redirect ('/login')
 
 
